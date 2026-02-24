@@ -3,8 +3,8 @@
     {
       "id": "profile-headshot",
       "description": "Abhishek Pandey Professional Headshot",
-      "imageUrl": "https://images.unsplash.com/photo-1727701616753-05209bda68a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBYmhpc2hlayUyMGhlYWRzaG90fGVufDB8fHx8MTc3MTk2MjI2OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Abhishek headshot"
+      "imageUrl": "/AbhishekPandeyPhoto.jpg",
+      "imageHint": "professional headshot"
     },
     {
       "id": "research-iq",

@@ -42,7 +42,6 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link 
@@ -61,7 +60,6 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button 
           className="md:hidden text-foreground p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -70,7 +68,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background border-b border-border p-6 flex flex-col gap-4 md:hidden animate-in slide-in-from-top duration-300">
           {navLinks.map((link) => (
