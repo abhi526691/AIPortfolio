@@ -13,7 +13,7 @@ export function Projects() {
       title: "Authentiscan",
       description: "Developed a high-accuracy DeepFake image detector identifying real vs fake images using VGG-Face and ResNet-50 models. Leveraged training data scraped from live sources including Pexels, Unsplash, and ThisPersonDoesNotExist.",
       image: PlaceHolderImages.find(img => img.id === 'authentiscan'),
-      tags: ["Tensorflow", "Pytorch", "FastAPI", "VGG-Net", "ResNet", "MtCNN", "AWS", "Docker"],
+      tags: ["Tensorflow", "Pytorch", "FastAPI", "VGG-Net", "ResNet", "MtCNN", "AWS", "Docker", "Selenium", "OpenCV"],
       impact: "Achieved 98% accuracy by integrating advanced image processing models on AWS for real-time authentication.",
       source: "https://github.com/Step-Presentation-Sem-2"
     },
@@ -42,7 +42,7 @@ export function Projects() {
       title: "Covid Guard",
       description: "AI model to detect social distancing and face-mask compliance for public safety. Designed for integration with embedded systems in airports, stations, and offices.",
       image: PlaceHolderImages.find(img => img.id === 'covid-guard'),
-      tags: ["Tensorflow", "Python", "YOLOv3", "Neural Networks", "Keras", "OpenCV"],
+      tags: ["Tensorflow", "Python", "YOLOv3", "Neural Networks", "Keras", "OpenCV", "Numpy", "Pandas"],
       impact: "Real-time safety monitoring solution capable of running on low-power edge devices.",
       source: "https://github.com/snjydas/Covid-Guard"
     }
