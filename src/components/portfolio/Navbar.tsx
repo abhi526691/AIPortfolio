@@ -37,8 +37,8 @@ export function Navbar() {
             <BrainCircuit className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse border-2 border-background"></div>
           </div>
-          <span className="font-headline font-bold text-xl tracking-tighter">
-            Abhishek<span className="text-primary">.AI</span>
+          <span className="font-headline font-bold text-2xl tracking-tighter">
+            Abhishek<span className="text-primary">AI</span>
           </span>
         </Link>
 

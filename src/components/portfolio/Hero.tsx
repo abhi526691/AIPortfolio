@@ -1,12 +1,12 @@
+
 import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin, Mail, ArrowRight, Download, BrainCircuit } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
+// Import directly from lib to ensure correct bundling since the user specified it's in the lib directory
+import profilePic from "@/lib/AbhishekPandeyPhoto.jpg"
 
 export function Hero() {
-  const profileImg = PlaceHolderImages.find(img => img.id === 'profile-headshot')
-
   return (
     <section id="about" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden gradient-bg">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -45,10 +45,10 @@ export function Hero() {
           </div>
 
           <div className="flex items-center gap-6 pt-6">
-            <Link href="https://linkedin.com" className="text-foreground/40 hover:text-primary transition-colors">
+            <Link href="https://linkedin.com" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
               <Linkedin className="w-6 h-6" />
             </Link>
-            <Link href="https://github.com/abhi526691" className="text-foreground/40 hover:text-primary transition-colors">
+            <Link href="https://github.com/abhi526691" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
               <Github className="w-6 h-6" />
             </Link>
             <Link href="mailto:abhi526691shek@gmail.com" className="text-foreground/40 hover:text-primary transition-colors">
@@ -60,14 +60,16 @@ export function Hero() {
         <div className="relative order-1 md:order-2 flex justify-center items-center">
           <div className="relative w-64 h-64 md:w-96 md:h-96 group">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500"></div>
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
-              <Image 
-                src={profileImg?.imageUrl || ""} 
-                alt="Abhishek Pandey" 
-                fill
-                className="object-cover"
-                data-ai-hint={profileImg?.imageHint}
-              />
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500 bg-muted">
+              {profilePic && (
+                <Image 
+                  src={profilePic} 
+                  alt="Abhishek Pandey" 
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              )}
             </div>
             {/* Decorative Elements */}
             <div className="absolute -bottom-6 -left-6 bg-card border border-border p-4 rounded-xl shadow-xl hidden lg:block animate-bounce duration-[3000ms]">

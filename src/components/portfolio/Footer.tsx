@@ -8,7 +8,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex items-center gap-2">
           <BrainCircuit className="w-6 h-6 text-primary" />
-          <span className="font-headline font-bold text-lg">Abhishek.AI</span>
+          <span className="font-headline font-bold text-xl tracking-tighter">
+            Abhishek<span className="text-primary">AI</span>
+          </span>
         </div>
         
         <div className="text-sm text-foreground/50">

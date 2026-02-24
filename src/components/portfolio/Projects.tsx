@@ -12,28 +12,28 @@ export function Projects() {
     {
       id: "authentiscan",
       title: "Authentiscan",
-      description: "Developed a high-accuracy DeepFake image detector identifying real vs fake images using VGG-Face and ResNet-50 models.",
+      description: "Developed a high-accuracy DeepFake image detector identifying real vs fake images using VGG-Face and ResNet-50 models, with data scraped from live sources (Pexels, Unsplash, freepix, ThisPersonDoesNotExist).",
       image: PlaceHolderImages.find(img => img.id === 'authentiscan'),
-      tags: ["Tensorflow", "Pytorch", "AWS", "FastAPI", "VGG-Net"],
+      tags: ["Tensorflow", "Pytorch", "AWS", "FastAPI", "VGG-Net", "ResNet", "MtCNN", "Docker"],
       impact: "Achieved 98% accuracy creating a reliable and scalable solution for real-time authentication.",
       source: "https://github.com/Step-Presentation-Sem-2"
     },
     {
       id: "research-iq",
       title: "ResearchIQ",
-      description: "AI Research Assistant for intuitive paper exploration with OCR processing and intelligent NLP analysis.",
+      description: "AI Research Assistant for intuitive paper exploration with OCR processing and intelligent NLP analysis. Streamlined academic workflows using advanced NLP techniques.",
       image: PlaceHolderImages.find(img => img.id === 'research-iq'),
-      tags: ["FastAPI", "Next.js", "MongoDB", "Mistral", "OCR"],
-      impact: "Streamlined academic workflows using advanced NLP techniques.",
+      tags: ["FastAPI", "Next.js", "MongoDB", "Mistral", "OCR", "LangChain"],
+      impact: "Integrated AI platform for intelligent analysis and document processing.",
       demo: "https://www.loom.com/share/1b2c76b98aff4cb8bac37735f1212109",
       source: "https://github.com/abhi526691/ResearchIQ"
     },
     {
       id: "super-llm",
       title: "SuperLLM",
-      description: "End-to-end AI platform with document processing, SQL generation, and conversational capabilities.",
+      description: "End-to-end AI platform with document processing, natural language to SQL generation, and conversational capabilities with high accuracy.",
       image: PlaceHolderImages.find(img => img.id === 'super-llm'),
-      tags: ["PyTorch", "ChromaDB", "Groq", "FastAPI"],
+      tags: ["PyTorch", "ChromaDB", "Groq", "FastAPI", "Next.js", "SQL"],
       impact: "High accuracy natural language to SQL conversion with low latency.",
       demo: "https://www.loom.com/share/2bf92ff9c0364b3abba1be2cf03bf815?sid=5b293b9e-7e67-4f1d-a16b-d9bf1c3a99bc",
       source: "https://github.com/abhi526691/SuperLLM"
@@ -41,10 +41,10 @@ export function Projects() {
     {
       id: "covid-guard",
       title: "Covid Guard",
-      description: "AI model to detect social distancing and face-mask compliance for public safety in high-traffic areas.",
+      description: "AI model to detect social distancing and face-mask compliance for public safety. Integrable with embedded systems for real-time monitoring in high-traffic public places.",
       image: PlaceHolderImages.find(img => img.id === 'covid-guard'),
-      tags: ["Tensorflow", "Python", "YOLOv3", "Neural Networks"],
-      impact: "Integrable with embedded systems for real-time monitoring in public places.",
+      tags: ["Tensorflow", "Python", "YOLOv3", "Neural Networks", "Keras", "OpenCV"],
+      impact: "Real-time safety monitoring solution for airports, stations, and public offices.",
       source: "https://github.com/snjydas/Covid-Guard"
     }
   ]
@@ -60,7 +60,7 @@ export function Projects() {
             </p>
           </div>
           <Button asChild variant="link" className="text-primary font-bold group">
-            <Link href="https://github.com/abhi526691">
+            <Link href="https://github.com/abhi526691" target="_blank">
               View all on GitHub <Github className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
             </Link>
           </Button>
@@ -103,11 +103,16 @@ export function Projects() {
                   <Sparkles className="w-5 h-5 text-accent" />
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
+                  {project.tags.slice(0, 5).map(tag => (
                     <Badge key={tag} variant="outline" className="text-[10px] uppercase tracking-wider text-primary border-primary/20">
                       {tag}
                     </Badge>
                   ))}
+                  {project.tags.length > 5 && (
+                    <Badge variant="outline" className="text-[10px] uppercase tracking-wider text-primary border-primary/20">
+                      +{project.tags.length - 5}
+                    </Badge>
+                  )}
                 </div>
               </CardHeader>
               
