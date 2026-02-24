@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "profile-headshot",
-      "description": "Professional AI Engineer headshot",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcxOTMxNzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional man"
+      "description": "Abhishek Pandey Professional Headshot",
+      "imageUrl": "https://images.unsplash.com/photo-1727701616753-05209bda68a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBYmhpc2hlayUyMGhlYWRzaG90fGVufDB8fHx8MTc3MTk2MjI2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Abhishek headshot"
     },
     {
       "id": "research-iq",
@@ -19,16 +19,16 @@
       "imageHint": "code interface"
     },
     {
-      "id": "child-detection",
-      "description": "Missing Child Detection System",
+      "id": "authentiscan",
+      "description": "DeepFake Image Detector",
       "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHZpc2lvbnxlbnwwfHx8fDE3NzE5NjE0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "computer vision"
+      "imageHint": "facial recognition"
     },
     {
-      "id": "restaurant-analytics",
-      "description": "Restaurant Analytics Platform",
-      "imageUrl": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzcxOTU3MjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data analysis"
+      "id": "covid-guard",
+      "description": "Covid Guard Public Safety System",
+      "imageUrl": "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYXNrJTIwZGV0ZWN0aW9ufGVufDB8fHx8MTc3MTk2MTQ0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "safety detection"
     }
   ]
 }

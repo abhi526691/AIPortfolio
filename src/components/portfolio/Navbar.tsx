@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -32,9 +33,12 @@ export function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <BrainCircuit className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-          <span className="font-headline font-bold text-xl tracking-tight hidden sm:inline-block">
-            IntelliFolio <span className="text-primary">AI</span>
+          <div className="relative">
+            <BrainCircuit className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse border-2 border-background"></div>
+          </div>
+          <span className="font-headline font-bold text-xl tracking-tighter">
+            Abhishek<span className="text-primary">.AI</span>
           </span>
         </Link>
 
