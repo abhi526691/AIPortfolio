@@ -18,113 +18,59 @@ export type AiPortfolioAssistantInput = z.infer<
   typeof AiPortfolioAssistantInputSchema
 >;
 
-const AiPortfolioAssistantOutputSchema = z
-  .string()
-  .describe("The AI assistant's answer based on the portfolio owner's resume.");
+// Using an object for structured output is more reliable in Genkit 1.x
+const AiPortfolioAssistantOutputSchema = z.object({
+  answer: z.string().describe("The AI assistant's answer based on the portfolio owner's resume.")
+});
 export type AiPortfolioAssistantOutput = z.infer<
   typeof AiPortfolioAssistantOutputSchema
 >;
 
-// The resume content is embedded directly into the prompt for RAG-like behavior.
+// Cleaned up resume content for better AI processing
 const RESUME_CONTENT = `
 Abhishek Pandey
-* Open To Relocate  +1 (437)-484-4461 # abhi526691shek@gmail.com ï LinkedIn § GitHub  Website
+AI Engineer | Toronto, ON | Available to Relocate
+Email: abhi526691shek@gmail.com
+LinkedIn: linkedin.com/in/abhishekpandey--/
+GitHub: github.com/abhi526691
+
 Professional Summary
-• AI Engineer with 3+ years specializing in production-grade LLM applications, RAG systems, and MLOps
-pipelines that deliver measurable impact: 95% efficiency gains, 5-10% revenue increases, and platforms
-processing 50K+ monthly API requests
-• Architected and deployed end-to-end GenAI solutions across construction and pharmaceutical industries,
-from LLM integration and vector database optimization to scalable cloud infrastructure on Azure/AWS
-• Expert in LLMs, MLOps, and production AI systems—delivered sub-100ms inference, automated
-workflows replacing weeks of manual work, and production APIs supporting thousands of concurrent users
+- AI Engineer with 3+ years specializing in production-grade LLM applications, RAG systems, and MLOps pipelines.
+- Expertise in delivering 95% efficiency gains and platforms processing 50K+ monthly API requests.
+- Architected and deployed end-to-end GenAI solutions across construction and pharmaceutical industries.
+
 Core Skills
-• Machine Learning & AI: PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, LangChain, RAG
-architectures, model fine-tuning, computer vision (OCR, facial recognition), NLP, ML pipelines, deep learning,
-Pydantic, Agentic AI, ReACT
-• Generative AI & LLMs: OpenAI APIs, prompt engineering, LLM fine-tuning, chatbot development, semantic
-search, vector databases (Pinecone, ChromaDB, FAISS), retrieval systems, document processing
-• MLOps & Deployment: Docker, Kubernetes (AKS), CI/CD (Jenkins), MLflow, model serving, A/B testing,
-monitoring, performance optimization, experiment tracking, model versioning
-• Cloud Platforms: Azure (Cognitive Services, AKS, App Service, Storage), AWS (SageMaker, Lambda, EC2,
-S3), serverless architectures, auto-scaling, cloud-native design
-• Backend Development & Data: Python, FastAPI, Flask, Django, REST APIs, microservices, SQL
-(PostgreSQL), NoSQL (MongoDB), Redis (Cache), real-time streaming, RabbitMQ
-• Tools & Frontend: React.js, Next.js, Streamlit, PowerBI, Git, Linux/Unix, shell scripting, JavaScript, R
-•
+- Machine Learning & AI: PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, LangChain, RAG architectures, model fine-tuning, computer vision (OCR, facial recognition), NLP.
+- Generative AI & LLMs: OpenAI APIs, prompt engineering, chatbot development, vector databases (Pinecone, ChromaDB, FAISS), retrieval systems.
+- MLOps & Deployment: Docker, Kubernetes (AKS), CI/CD (Jenkins), MLflow, model serving, A/B testing, performance optimization.
+- Cloud Platforms: Azure (Cognitive Services, AKS, App Service, Storage), AWS (SageMaker, Lambda, EC2, S3).
+- Backend & Data: Python, FastAPI, Flask, Django, REST APIs, SQL (PostgreSQL), NoSQL (MongoDB), Redis, RabbitMQ.
+- Frontend: React.js, Next.js, Streamlit, PowerBI.
+
 Professional Experience
-Creatiz Feb 2026 – Present
-Founding AI Engineer Toronto, ON
-• Building AI-powered LinkedIn content platform helping creators and founders generate, analyze, and schedule posts to
-grow their personal brand
-MHA Solution Jan 2025 – Apr 2025
-AI & ML Engineer Co-op Toronto, ON
-• Developed a RAG-based chatbot using LangChain, ChromaDB, and OpenAI APIs with FastAPI backend to
-automate the company’s error-code handling process
-• Collaborated in an agile environment, streamlining internal support workflows and reducing manual error resolution
-time by over 30%
-Dimensionless Technologies Jan 2022 – Dec 2023
-Full Stack AI Engineer & Team Lead Remote
-• Led development of PropelPro, a GenAI-powered construction bidding platform, architecting 4 core modules
-(PropelRead, PropelFlow, PropelWrite, PropelMath) that increased win rates by 5-10% and reduced proposal writing
-time by 95% for EPC/AEC companies
-• Built PropelRead’s automated tender analysis engine using LLMs and NLP, extracting critical information from
-100+ page RFP documents in minutes vs. days, with integrated AI chatbot for instant query resolution
-• Engineered PropelWrite’s AI-assisted proposal generation system leveraging RAG architecture and industry-specific
-templates (React), boosting team productivity by 20% through intelligent content personalization
-• Developed AushadhAI’s automated reconciliation and database verification modules for pharma returns processing,
-enabling C&F agents to validate stockist claims, detect discrepancies, and auto-generate credit notes with seamless
-ERP integration
-• Architected multi-level analytics dashboard for AushadhAI providing real-time visibility across SKU, batch, stockist,
-region, and operator levels, transforming manual reconciliation into AI-powered automated workflows
-• Deployed enterprise-grade REST APIs(Django) on Azure supporting both platforms with 50k+ monthly
-requests, implementing MLOps pipelines using CI/CD, MLflow, Docker & AKS that reduced deployment cycles
-from weeks to days
-Ameex Technologies PVT LTD Jan 2021 – Dec 2021
-Associate Software Engineer Hybrid
-• Rotated through UI/UX, QA, and Development teams during initial 3 months to gain comprehensive
-understanding of full software development lifecycle, from design and testing to production deployment
-• Developed and deployed RESTful APIs for healthcare monitoring platform enabling remote tracking of medication
-adherence and health vitals for elderly and vulnerable patients living independently
-• Engineered automated alert system integrated with APIs to notify family members and caregivers in real-time when
-patients missed medications or exhibited concerning health patterns, improving patient safety outcomes
-Key Technical Projects
-ResearchIQ - AI Research Assistant | FastAPI, Next.js, MongoDB, LangChain, TensorFlow, Mistral, OCR 
-• Built comprehensive AI platform for intuitive research paper exploration with document upload, OCR processing,
-and intelligent analysis using advanced NLP techniques, enabling seamless academic and professional research workflows
-SuperLLM - AI Document Assistant | FastAPI, Next.js, Groq, PyTorch, ChromaDB 
-• Developed end-to-end AI platform with document processing, SQL generation, and conversational AI
-capabilities, featuring PDF ingestion and natural language to SQL conversion with high accuracy
-Missing Child Detection System | Computer Vision, TensorFlow, Flask, IBM Cloud
-• Created facial recognition system using deep learning for real-time missing person identification with 90%+
-accuracy and scalable cloud infrastructure for emergency response applications
-Restaurant Analytics Platform | Python, TensorFlow, SHAP, LIME, Streamlit
-• Built ML solution for restaurant performance prediction with explainable AI using SHAP/LIME, featuring interactive
-dashboard for real-time business insights and decision support
-Education & Certifications
-Loyalist College 2023 – 2025
-Ontario Graduate Certificate in AI and Data Science Toronto, ON
-Vel Tech Institute of Technology 2017 – 2021
-Bachelor of Technology, Computer Science Chennai, IN
-Professional Certifications: Deep Learning Specialization (Coursera - Andrew Ng), Advanced Data Analysis
-with Python (IBM Cognitive Class), Deep Learning (NPTEL), Power BI Fundamentals (Coursera), Introduction to
-Data Science with Python (University of Michigan), Deep Agent by LangGraph, Azure AI Engineer Associate
-(In Progress)
-Achievements & Recognition
-Winner - First Place, Prakalpa Z-20 AI Competition: Led development of ”DESTROY COVID-19” AI solution,
-recognized by Computer Society of India for innovative approach to pandemic response using machine learning
-Fintech Innovation Award - TBC Fintech Event: Developed blockchain-secured QR payment system with AI-driven
-fraud detection capabilities, demonstrating cross-domain technical expertise
-Technical Leadership Recognition: Successfully mentored junior developers and established ML engineering best
-practices at Dimensionless Technologies, contributing to team productivity improvements
-Continuous Learning Commitment: Completed multiple professional development programs (Samarthya, EMGE
-internships) demonstrating consistent growth mindset and technical skill expansion
+- Creatiz (Feb 2026 – Present): Founding AI Engineer. Building AI-powered LinkedIn content platform for creators.
+- MHA Solution (Jan 2025 – Apr 2025): AI & ML Engineer Co-op. Developed RAG-based chatbot using LangChain and ChromaDB.
+- Dimensionless Technologies (Jan 2022 – Dec 2023): Full Stack AI Engineer & Team Lead. Led PropelPro (GenAI for construction bidding) and AushadhAI (pharma reconciliation). Deployed Django APIs on Azure with 50k+ monthly requests.
+- Ameex Technologies (Jan 2021 – Dec 2021): Associate Software Engineer. Developed healthcare monitoring platform APIs.
+
+Key Projects
+- Authentiscan: DeepFake Image Detector (98% accuracy) using VGG-Face/ResNet-50. Scraped data from Unsplash and Pexels.
+- ResearchIQ: AI Research Assistant with OCR and NLP analysis.
+- SuperLLM: End-to-end AI platform for natural language to SQL conversion.
+- Covid Guard: AI model for face-mask and social distancing detection using YOLOv3.
+
+Education
+- Loyalist College: Ontario Graduate Certificate in AI and Data Science (2023 – 2025).
+- Vel Tech Institute of Technology: B.Tech in Computer Science (2017 – 2021).
 `;
 
 const aiPortfolioAssistantPrompt = ai.definePrompt({
   name: 'aiPortfolioAssistantPrompt',
-  input: {schema: z.object({question: AiPortfolioAssistantInputSchema, resumeContent: z.string()})},
+  input: {schema: z.object({question: z.string(), resumeContent: z.string()})},
   output: {schema: AiPortfolioAssistantOutputSchema},
-  prompt: `You are an AI assistant representing Abhishek Pandey. Your goal is to answer questions about Abhishek's professional experience, skills, and projects based *only* on the provided resume content. Do not make up information. If the answer is not explicitly stated or inferable from the resume, state that you cannot find the information.
+  prompt: `You are an AI assistant representing Abhishek Pandey. Your goal is to answer questions about Abhishek's professional experience, skills, and projects based *only* on the provided resume content. 
+
+Do not make up information. If the answer is not explicitly stated or inferable from the resume, state that you cannot find the information. Be professional and helpful.
 
 Resume Content:
 ---
@@ -140,17 +86,22 @@ const aiPortfolioAssistantFlow = ai.defineFlow(
   {
     name: 'aiPortfolioAssistantFlow',
     inputSchema: AiPortfolioAssistantInputSchema,
-    outputSchema: AiPortfolioAssistantOutputSchema,
+    outputSchema: z.string(),
   },
   async question => {
-    const {output} = await aiPortfolioAssistantPrompt({
-      question: question,
-      resumeContent: RESUME_CONTENT,
-    });
-    return output!;
+    try {
+      const {output} = await aiPortfolioAssistantPrompt({
+        question: question,
+        resumeContent: RESUME_CONTENT,
+      });
+      return output?.answer || "I'm sorry, I couldn't find a specific answer to that in Abhishek's resume.";
+    } catch (error) {
+      console.error("Chatbot Flow Error:", error);
+      return "I encountered an issue processing your request. Please try again or contact Abhishek directly.";
+    }
   }
 );
 
-export async function aiPortfolioAssistant(input: AiPortfolioAssistantInput): Promise<AiPortfolioAssistantOutput> {
+export async function aiPortfolioAssistant(input: string): Promise<string> {
   return aiPortfolioAssistantFlow(input);
 }

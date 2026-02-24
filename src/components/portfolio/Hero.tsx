@@ -1,9 +1,8 @@
-
 import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin, Mail, ArrowRight, Download, BrainCircuit } from "lucide-react"
 import { Button } from "@/components/ui/button"
-// Import directly from lib to ensure correct bundling since the user specified it's in the lib directory
+// Import profile pic directly from lib to ensure correct bundling
 import profilePic from "@/lib/AbhishekPandeyPhoto.jpg"
 
 export function Hero() {
@@ -45,7 +44,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-center gap-6 pt-6">
-            <Link href="https://linkedin.com" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
+            <Link href="https://www.linkedin.com/in/abhishekpandey--/" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
               <Linkedin className="w-6 h-6" />
             </Link>
             <Link href="https://github.com/abhi526691" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
@@ -60,8 +59,8 @@ export function Hero() {
         <div className="relative order-1 md:order-2 flex justify-center items-center">
           <div className="relative w-64 h-64 md:w-96 md:h-96 group">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500"></div>
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500 bg-muted">
-              {profilePic && (
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500 bg-muted flex items-center justify-center">
+              {profilePic ? (
                 <Image 
                   src={profilePic} 
                   alt="Abhishek Pandey" 
@@ -69,6 +68,8 @@ export function Hero() {
                   className="object-cover"
                   priority
                 />
+              ) : (
+                <BrainCircuit className="w-24 h-24 text-primary/20" />
               )}
             </div>
             {/* Decorative Elements */}

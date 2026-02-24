@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { BrainCircuit, Github, Linkedin, Mail } from "lucide-react"
 
@@ -18,10 +17,10 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <Link href="https://linkedin.com" className="text-foreground/40 hover:text-primary transition-colors">
+          <Link href="https://www.linkedin.com/in/abhishekpandey--/" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
             <Linkedin className="w-5 h-5" />
           </Link>
-          <Link href="https://github.com/abhi526691" className="text-foreground/40 hover:text-primary transition-colors">
+          <Link href="https://github.com/abhi526691" target="_blank" className="text-foreground/40 hover:text-primary transition-colors">
             <Github className="w-5 h-5" />
           </Link>
           <Link href="mailto:abhi526691shek@gmail.com" className="text-foreground/40 hover:text-primary transition-colors">
