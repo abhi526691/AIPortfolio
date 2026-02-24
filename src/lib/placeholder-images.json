@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "profile-headshot",
+      "description": "Professional AI Engineer headshot",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcxOTMxNzk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "research-iq",
+      "description": "AI Research Assistant Interface",
+      "imageUrl": "https://images.unsplash.com/photo-1567775454727-7754556725f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhaSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzE4NTQzNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai dashboard"
+    },
+    {
+      "id": "super-llm",
+      "description": "AI Document Assistant Snapshot",
+      "imageUrl": "https://images.unsplash.com/photo-1762330467475-a565d04e1808?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb2RlJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc3MTk2MTQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code interface"
+    },
+    {
+      "id": "child-detection",
+      "description": "Missing Child Detection System",
+      "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHZpc2lvbnxlbnwwfHx8fDE3NzE5NjE0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "computer vision"
+    },
+    {
+      "id": "restaurant-analytics",
+      "description": "Restaurant Analytics Platform",
+      "imageUrl": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzcxOTU3MjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data analysis"
+    }
+  ]
 }
